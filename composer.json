@@ -1,0 +1,16 @@
+{
+    "name": "yubedarev/bitcoin",
+    "description": "multiapi",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Bitapp\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "monolog/monolog": "^1.23"
+    },
+    "license": "MIT"
+}
