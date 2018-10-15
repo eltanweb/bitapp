@@ -1,5 +1,5 @@
 <?php
-namespace Bitapp\Core\Http;
+namespace Bitapp\CoreApi\Http;
 
 class Exception extends \Exception
 {

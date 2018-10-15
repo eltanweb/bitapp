@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Bitapp\Core;
+namespace Bitapp\CoreApi;
 
 class Dispatcher
 {

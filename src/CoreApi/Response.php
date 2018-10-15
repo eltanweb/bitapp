@@ -1,13 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Bitapp\Core;
+namespace Bitapp\CoreApi;
 
-class Request
+class Response
 {
 
     public function __construct()
     {
-
     }
 
 }
