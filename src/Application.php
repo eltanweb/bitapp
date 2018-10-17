@@ -26,9 +26,6 @@ class Application
      */
     public function Run(Config $config)
     {
-
-        var_dump($_SERVER);
-
         $context = new Context();
     }
 }
