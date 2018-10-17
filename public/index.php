@@ -1,5 +1,5 @@
-#!/usr/bin/env php
-<?php declare(strict_types=1);
+<?php
+//declare(strict_types=1);
 
     //  default root path
     define('ROOT_DIR', dirname(__DIR__));
@@ -7,7 +7,9 @@
     // include vendor
     include_once ROOT_DIR . '/vendor/autoload.php';
 
+    $config = \Bitapp\Config::load();
+
     // start application
-    $app = new App();
-    $app->run();
+    $app = new \Bitapp\Application(true);
+    $app->Run($config);
 
