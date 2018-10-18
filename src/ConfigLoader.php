@@ -17,7 +17,7 @@ class ConfigLoader
     /**
      *  function for load config file;
      */
-    public static function execute(array $configs)
+    public static function execute(array $configs): ConfigLoader
     {
         $self = new self();
         $self->load($configs);
