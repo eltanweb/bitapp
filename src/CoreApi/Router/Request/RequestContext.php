@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Bitapp\CoreApi\Request;
+namespace Bitapp\CoreApi\Router\Request;
 
 /**
  * Содержит контекст о текущем запросе.

@@ -2,7 +2,8 @@
 
 namespace Bitapp\CoreApi\Router;
 
-use Bitapp\CoreApi\Request\RequestContext;
+use Bitapp\CoreApi\Command\Command;
+use Bitapp\CoreApi\Router\Request\RequestContext;
 
 class Router
 {
@@ -25,5 +26,16 @@ class Router
     public function __construct(RequestContext $context = null)
     {
         $this->context = $context ?: new RequestContext();
+    }
+
+    public function execute(): Command
+    {
+        $cmd = new Command();
+        return $cmd;
+    }
+
+    private function resolveCommand()
+    {
+
     }
 }

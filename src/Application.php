@@ -1,7 +1,8 @@
 <?php declare(strict_types=1);
 
 namespace Bitapp;
-use Bitapp\CoreApi\Request\RequestContext;
+use Bitapp\CoreApi\Router\Request\RequestContext;
+use Bitapp\CoreApi\Router\Router;
 use MongoDB\Driver\Command;
 
 /**
@@ -35,8 +36,7 @@ class Application
      */
     public static function init($debug = false, ConfigLoader $config)
     {
-        $application = new Application($debug, $config);
-        $application->Run();
+        return new Application($debug, $config);
     }
 
     /**
@@ -45,8 +45,8 @@ class Application
     public function Run()
     {
         $context = new RequestContext();
-        $cmdResolver = new Command(Resolver);
-        $cmd = $cmdResolver->getCommand($context);
-        $cmd->execute($context);
+        $router = new Router($context);
+        $cmd = $router->execute();
+        $cmd->exec($context);
     }
 }

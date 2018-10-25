@@ -7,8 +7,9 @@
     include_once ROOT_DIR . '/vendor/autoload.php';
 
     $config = \Bitapp\ConfigLoader::execute(
-            [ 'api' => ROOT_DIR.'/comfig/env.php',
-              'db' =>ROOT_DIR.'/config/main.php'
+            [
+              ROOT_DIR.'/config/env.php',
+              ROOT_DIR.'/config/main.php'
             ]
     );
 
